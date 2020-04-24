@@ -176,8 +176,7 @@ export function useMutation(queryArg, config = {}) {
 
     const promise = client.mutate(queryArg, data, options)
 
-    setState(prev => ({
-      ...prev,
+    setState(() => ({
       isLoading: true,
       promise,
     }))

@@ -10,11 +10,11 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest .",
-    "build": "NODE_ENV=production rollup -c",
+    "build": "cross-env NODE_ENV=production rollup -c",
     "start": "rollup -c -w",
     "format": "prettier {src,src/**}/*.{md,js} --write",
     "publish": "npm publish",
-    "prepare": "NODE_ENV=production rollup -c"
+    "prepare": "cross-env NODE_ENV=production rollup -c"
   },
   "peerDependencies": {
     "react": "^16.8.0",
